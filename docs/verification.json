@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-08",
+  "static_checks": [
+    {
+      "page": "index.html",
+      "local_links_and_assets": 13,
+      "unique_ids": 1,
+      "h1_count": 1,
+      "language": "en",
+      "scripts": 0,
+      "sha256": "be02df9c681a360804bf1eee7a995eb5c9028f949d22a22510262c19026e44c6"
+    },
+    {
+      "page": "privacy-policy.html",
+      "local_links_and_assets": 22,
+      "unique_ids": 12,
+      "h1_count": 1,
+      "language": "en",
+      "scripts": 0,
+      "sha256": "7a063c28f3807f89bf6e7a74ee9c15d29fa41cdb79ccba49635d9b84cbf448d3"
+    },
+    {
+      "page": "terms.html",
+      "local_links_and_assets": 22,
+      "unique_ids": 11,
+      "h1_count": 1,
+      "language": "en",
+      "scripts": 0,
+      "sha256": "642534f2567e217473e2f86eb525682ee41f145806726576cdbc501a9d1444c9"
+    }
+  ],
+  "errors": [],
+  "all_passed": true,
+  "browser_checks": [
+    {
+      "background": "rgb(244, 248, 247)",
+      "emailLinks": [
+        "mailto:ymwotow411846@gmail.com"
+      ],
+      "page": "/terms.html",
+      "publisher": true,
+      "scripts": 0,
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(13, 25, 30)",
+      "page": "/terms.html",
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(13, 25, 30)",
+      "brokenImages": 0,
+      "page": "/index.html",
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(244, 248, 247)",
+      "page": "/index.html",
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(244, 248, 247)",
+      "emailLinks": [
+        "mailto:ymwotow411846@gmail.com"
+      ],
+      "page": "/privacy-policy.html",
+      "publisher": true,
+      "scripts": 0,
+      "scrollWidth": 390,
+      "theme": "light",
+      "width": 390
+    },
+    {
+      "background": "rgb(13, 25, 30)",
+      "page": "/privacy-policy.html",
+      "scrollWidth": 390,
+      "theme": "dark",
+      "width": 390
+    },
+    {
+      "background": "rgb(13, 25, 30)",
+      "contentsHeight": 568.234375,
+      "page": "/privacy-policy.html",
+      "scrollWidth": 1280,
+      "theme": "dark",
+      "width": 1280
+    },
+    {
+      "background": "rgb(244, 248, 247)",
+      "page": "/privacy-policy.html",
+      "scrollWidth": 1280,
+      "theme": "light",
+      "width": 1280
+    }
+  ],
+  "runtime_in_scope": [
+    "local HTML navigation and anchors",
+    "1280 desktop and 390 mobile layout",
+    "system light and dark color schemes",
+    "real publisher and private email rendered"
+  ],
+  "not_verified": [
+    "GitHub Pages deployment",
+    "Google Play policy approval",
+    "native engine data-flow audit"
+  ]
+}
