@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <meta name="description" content="How Multi Space handles local app instances, permissions, Firebase configuration, and privacy requests.">
+  <meta name="description" content="How Multi Space handles local app instances, permissions, advertising, purchases, Firebase configuration, and privacy requests.">
   <title>Privacy Policy · Multi Space</title>
   <link rel="stylesheet" href="assets/site.css">
   <link rel="icon" type="image/png" href="assets/multispace-logo.png">
@@ -19,7 +19,7 @@
     <p class="eyebrow">Multi Space / Legal</p>
     <h1>Privacy Policy</h1>
     <p class="intro">How information is handled when you manage applications and accounts with Multi Space.</p>
-    <p class="updated">Effective date: October 8, 2026 · Last updated: October 8, 2026</p>
+    <p class="updated">Last updated: November 5, 2026</p>
     <div class="legal-layout">
       <nav class="contents" aria-label="On this page">
         <h2>On this page</h2>
@@ -27,7 +27,9 @@
         <li><a href="#scope">Scope and who this policy covers</a></li>
         <li><a href="#local-data">Information used on your device</a></li>
         <li><a href="#permissions">Permissions and application content</a></li>
-        <li><a href="#remote-config">Firebase configuration and technical data</a></li>
+        <li><a href="#remote-config">Firebase configuration and Analytics choices</a></li>
+        <li><a href="#advertising">Advertising and ad privacy choices</a></li>
+        <li><a href="#purchases">Subscriptions and other in-app purchases</a></li>
         <li><a href="#sharing">When information leaves your device</a></li>
         <li><a href="#security">Storage and security</a></li>
         <li><a href="#retention">Retention and deletion</a></li>
@@ -40,7 +42,7 @@
       <article class="legal-content" aria-label="Privacy Policy">
         <section id="scope">
           <h2>1. Scope and who this policy covers</h2>
-          <p>This Privacy Policy describes data handling by Multi Space, the Android app with package name <strong>com.multispace.appcloner</strong>, and this Multi Space website. “We,” “us,” and “our” refer to <strong>mulitispaces</strong>, the developer of Multi Space.</p>
+          <p>This Privacy Policy describes data handling by Multi Space, the Android app with package name <strong>com.multispace.appcloner</strong>, and this Multi Space website. “We,” “us,” and “our” refer to <strong>Fidei Trading Limited</strong>, the developer of Multi Space.</p>
           <p>Multi Space manages separate instances of applications you choose to use. A source application, a cloned instance, Google Play, and other external services may have their own privacy policies. Their collection and processing are covered by those policies as well as any handling by Multi Space described here.</p>
         </section>
         <section id="local-data">
@@ -51,7 +53,7 @@
             <li><strong>Organization and preferences:</strong> Multi Space stores instance identifiers and numbers, custom names and icon choices, workspaces, display order, theme and language choices, and recent launch or failure records for management and search.</li>
             <li><strong>Device and compatibility information:</strong> Device model, Android version, CPU architecture, application version, permission and notification settings, and network availability may be read for operation and local diagnostics. Supported instance settings may provide virtual device identifiers to an application. These do not guarantee anonymity or prevent that application from identifying a device or account.</li>
           </ul>
-          <p>The management interface does not send your custom instance names, workspace names, installed-app list, or cloned account contents to Firebase Remote Config. Local diagnostics can be previewed and exported by you; the diagnostic export flow does not automatically upload a report to us.</p>
+          <p>The management interface does not send your custom instance names, workspace names, installed-app list, or cloned account contents to Firebase Remote Config. Local diagnostics can be previewed and exported by you; reports can include device configuration, application package names, and instance identifiers. The diagnostic export flow does not automatically upload a report to us.</p>
         </section>
         <section id="permissions">
           <h2>3. Permissions and application content</h2>
@@ -60,57 +62,74 @@
           <p>You can review or revoke available permissions in Android Settings. Revoking a permission may limit the relevant application feature. Review the policies and permission requests of the applications you run: their content and network traffic are not made private merely by running in a separate instance.</p>
         </section>
         <section id="remote-config">
-          <h2>4. Firebase configuration and technical data</h2>
-          <p>Multi Space uses <strong>Google Firebase Remote Config</strong> to retrieve application configuration, including minimum supported app versions, update notices, and whether Google Play component entries appear in the adding-app interface.</p>
+          <h2>4. Firebase configuration and Analytics choices</h2>
+          <p>Multi Space uses <strong>Google Firebase Remote Config</strong> to retrieve updates and feature configuration, including minimum supported app versions, update notices, component visibility, advertising display settings, and free-use limits.</p>
           <p>To provide this service, the Firebase SDK processes an installation identifier and technical information such as the application ID and package name, application or SDK version, platform and Android version, country and language codes, time zone, and service request information. Google may also process IP addresses and operational service logs. An installation identifier identifies an installation; it is not the same as your cloned account or its password.</p>
           <p>Configuration values are cached on your device so previously received settings can continue to apply when a network request fails. Changing component visibility does not delete your existing instances or their account data.</p>
-          <p>The current app configuration disables Firebase Analytics collection, automatic Crashlytics reporting, and commercial advertising and purchase initialization. Remote Config still makes network requests and processes the technical data needed for its service; disabling Analytics does not disable Remote Config.</p>
+          <p>Firebase Analytics consent settings follow the app’s recorded privacy choice. This choice is separate from Google’s advertising consent messages described below. Analytics collection is disabled by default in the current configuration; updating a consent setting does not itself establish that Analytics collection is enabled. Automatic Crashlytics reporting is also disabled. Remote Config still makes network requests and processes technical data for its service independently of Analytics consent.</p>
           <p>For Google’s processing and retention information, see <a href="https://firebase.google.com/support/privacy">Privacy and Security in Firebase</a>, <a href="https://firebase.google.com/docs/android/play-data-disclosure">Firebase Android data disclosure information</a>, and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
         </section>
+        <section id="advertising">
+          <h2>5. Advertising and ad privacy choices</h2>
+          <p>Multi Space uses <strong>Google Mobile Ads (AdMob)</strong> to display advertising in the Multi Space interface and <strong>Google User Messaging Platform (UMP)</strong> to obtain consent information and present privacy messages where required. Ad requests depend on the app’s access checks and UMP’s ad-request eligibility result. Eligible ads may be displayed without personalized advertising; declining personalization does not necessarily remove all ads or all technical processing.</p>
+          <p>Google’s advertising SDK processes information such as IP addresses (which can indicate approximate location), device, advertising, and applicable account-related identifiers when available, app and device information, app launches, ad views and interactions, and diagnostic and performance information. This is used to deliver and measure ads, operate the advertising service, and detect fraud or abuse. UMP processes consent information and privacy choices. Processing depends on your device settings, consent choices, and the applicable ad-serving mode. If mediation partners are enabled to supply an ad, they may also process advertising data; review the provider information in the applicable consent message or ad information.</p>
+          <p>Where Google requires an ad privacy options form, an advertising privacy entry is available in Multi Space Settings to review or change your choices. You can also review Android’s advertising privacy controls. Active Premium access removes advertising supplied by the Multi Space interface; it does not remove advertisements within applications you run or change those applications’ data practices.</p>
+          <p>See <a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure">Google Mobile Ads data disclosure</a>, <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>, and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+        </section>
+        <section id="purchases">
+          <h2>6. Subscriptions and other in-app purchases</h2>
+          <p>Multi Space uses <strong>RevenueCat</strong> with <strong>Google Play Billing</strong> to offer purchases, check subscription entitlements, and restore eligible purchases. RevenueCat is initialized when the app’s main process starts and can contact its service to check access even if you do not make a purchase. Subscription processing is separate from Analytics and advertising consent.</p>
+          <p>The integration uses a RevenueCat-generated app user identifier rather than a Multi Space login. RevenueCat processes this identifier, purchase and subscription records (such as product identifiers, purchase tokens, transaction dates, renewal or expiration status, and entitlements), and technical app, device, operating-system, and service-request information to validate purchases and maintain access. This identifier is pseudonymous; it does not mean that no information is processed. The integration does not attach your cloned-app passwords, messages, or workspace names as customer profile attributes.</p>
+          <p>Google Play handles billing and payment details under its own terms and privacy policy. Multi Space does not ask you to enter payment-card details in the app. Purchase and entitlement status may be cached locally. Restoring a purchase restores eligible access; it does not restore cloned application files, accounts, or messages.</p>
+          <p>See <a href="https://www.revenuecat.com/privacy-policy">RevenueCat’s Privacy Policy</a>, <a href="https://www.revenuecat.com/docs/platform-resources/google-platform-resources/google-plays-data-safety">RevenueCat’s Google Play data disclosure</a>, and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Purchase, renewal, and cancellation conditions are described in our <a href="terms.html#purchases">Terms of Service</a>.</p>
+        </section>
         <section id="sharing">
-          <h2>5. When information leaves your device</h2>
+          <h2>7. When information leaves your device</h2>
           <ul>
-            <li><strong>Google/Firebase:</strong> Technical data is processed to deliver configuration, maintain the service, and protect its operation as described above.</li>
+            <li><strong>Google/Firebase and advertising providers:</strong> Technical, advertising, and consent information is processed for configuration, ad delivery and measurement, service operation, and fraud prevention as described above.</li>
+            <li><strong>RevenueCat and Google Play:</strong> Identifiers, purchase records, and technical information are processed to offer and validate purchases, check entitlements, and restore eligible access as described above.</li>
             <li><strong>Applications and their providers:</strong> An application you run can send account, communication, media, location, or other data to its own provider according to your actions, permissions, and that provider’s policy. Multi Space does not operate those accounts or services.</li>
             <li><strong>Your exports or support requests:</strong> If you export a report or file, choose a sharing destination, or send information to support, that destination or recipient receives the information you choose to provide.</li>
             <li><strong>Website hosting:</strong> This static website is hosted by GitHub Pages. GitHub may process IP addresses, browser/request information, and security logs when you visit. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>. The website itself adds no analytics scripts, advertising trackers, or cookies.</li>
           </ul>
-          <p>We do not sell the information handled by the Multi Space management interface. If information is provided to us for support, we use it to respond to and resolve that request and may disclose it where required by applicable law.</p>
+          <p>The purposes and recipients of SDK processing are described above; local instance storage does not mean the whole app operates offline. If information is provided to us for support, we use it to respond to and resolve that request and may disclose it where required by applicable law.</p>
         </section>
         <section id="security">
-          <h2>6. Storage and security</h2>
+          <h2>8. Storage and security</h2>
           <p>Multi Space uses Android app-private storage and the engine’s per-instance storage separation for container data. Local separation is a management feature, not a guarantee of security against a compromised device, malicious application, or someone who can unlock your phone.</p>
           <p>Firebase configuration requests use HTTPS. Network security and storage inside applications you run depend on those applications and their providers; we cannot promise that all guest-application traffic or files are encrypted.</p>
           <p>The app’s Android backup rules exclude the virtual application data directory and selected legacy data stores from system cloud backup and device transfer. Other app preferences or management metadata may be included according to Android, device-provider, and user backup settings. Files or reports you export are outside this protection and remain at the destination you choose.</p>
         </section>
         <section id="retention">
-          <h2>7. Retention and deletion</h2>
+          <h2>9. Retention and deletion</h2>
           <ul>
             <li><strong>Remove an instance:</strong> Deleting an instance through Multi Space removes that installation and its container data through the engine. It does not delete the source application or the account held by its service provider. Some management records, including a retired instance identifier, can remain locally to avoid confusing an old instance with a later one.</li>
             <li><strong>Remove a workspace:</strong> Deleting a workspace moves its instances to the default group; it does not erase their application data or signed-in sessions.</li>
             <li><strong>Remove all local Multi Space data:</strong> Use Android Settings → Apps → Multi Space → Storage → Clear data, or uninstall Multi Space. This removes the local app container and preferences. System backup copies and any files you exported must be managed separately with the relevant device or storage provider.</li>
             <li><strong>Delete a third-party account:</strong> Use that application’s account-deletion process or contact its provider. Multi Space does not create a separate cloud Multi Space account in the current version.</li>
-            <li><strong>Firebase and hosting data:</strong> Service-provider identifiers and logs follow the providers’ retention and deletion policies. Clearing local data is not a promise of immediate deletion from their servers. Contact us for a request concerning data processed for Multi Space, and consult the linked provider policies.</li>
+            <li><strong>Purchases and subscriptions:</strong> Clearing app data or uninstalling Multi Space does not cancel a Google Play subscription or delete purchase records held by RevenueCat or Google. Manage or cancel subscriptions in Google Play. Use Restore purchases with the relevant Google Play account to recover eligible access after reinstalling. Purchase records may be retained to validate access, handle refunds or disputes, prevent fraud, and meet legal obligations.</li>
+            <li><strong>Provider data:</strong> Google/Firebase, advertising providers, RevenueCat, and GitHub retain identifiers and service records under their applicable policies and service requirements. Clearing local data is not a promise of immediate deletion from their servers. Contact us for a request concerning data processed for Multi Space, and consult the linked provider policies.</li>
           </ul>
           <p>Support information is retained while needed to handle the request and meet applicable legal obligations. Avoid sending unnecessary sensitive information. Public support posts remain governed by GitHub’s tools and policies.</p>
         </section>
         <section id="choices">
-          <h2>8. Your choices and privacy rights</h2>
+          <h2>10. Your choices and privacy rights</h2>
           <p>You can choose which applications to add, change or delete local organization information, revoke available Android permissions, delete instances, and clear local app data. You can also choose whether to send an exported diagnostic report or support message.</p>
+          <p>Review any privacy choice presented by the app, use the advertising privacy options in Settings when available, review Android’s advertising controls, and manage purchases through Google Play. If you need help withdrawing consent or making a privacy request beyond the controls available in the app, contact us below. Advertising choices do not cancel a subscription or erase provider transaction records.</p>
           <p>Depending on your location and the law that applies, you may have rights to request access, correction, deletion, portability, restriction, or objection concerning personal data, withdraw consent where processing relies on consent, or complain to a data protection authority. Contact us to make a request. We may need information sufficient to verify and locate the request without asking for your application account password.</p>
-          <p>Firebase and GitHub may process technical data in countries other than your own. Their linked privacy and data-processing information describes their international handling. These rights do not remove independent processing by an application provider you use.</p>
+          <p>Google/Firebase, advertising providers, RevenueCat, and GitHub may process information in countries other than your own. Their linked privacy and data-processing information describes their international handling. These rights do not remove independent processing by an application provider you use.</p>
         </section>
         <section id="children">
-          <h2>9. Children</h2>
+          <h2>11. Children</h2>
           <p>Multi Space is a general-purpose application-management tool and is not designed as a service directed to children. Do not provide a child’s personal information in a support request. If you believe a child has provided personal information to us, contact us so we can review and address the matter under applicable law. Applications used inside Multi Space may have separate age requirements.</p>
         </section>
         <section id="changes">
-          <h2>10. Changes to this policy</h2>
-          <p>We may update this policy when the app’s data handling or legal requirements change. The effective and last-updated dates above identify the current policy. Where required, material changes will be accompanied by an appropriate notice or consent request. An updated policy does not substitute for permission or consent required by law.</p>
+          <h2>12. Changes to this policy</h2>
+          <p>We may update this policy when the app’s data handling or legal requirements change. The last-updated date above identifies this policy version. Where required, material changes will be accompanied by an appropriate notice or consent request. An updated policy does not substitute for permission or consent required by law.</p>
         </section>
         <section id="contact">
-          <h2>11. Contact</h2>
-          <p><strong>Developer:</strong> mulitispaces<br><strong>App:</strong> Multi Space (com.multispace.appcloner)<br><strong>Email:</strong> <a href="mailto:ymwotow411846@gmail.com">ymwotow411846@gmail.com</a></p>
+          <h2>13. Contact</h2>
+          <p><strong>Developer:</strong> Fidei Trading Limited<br><strong>App:</strong> Multi Space (com.multispace.appcloner)<br><strong>Email:</strong> <a href="mailto:addaeisidore@gmail.com">addaeisidore@gmail.com</a></p>
           <p>For questions about Multi Space, this policy, or a privacy request, email us at the address above. Describe the request and include only information needed to help us respond. Do not send passwords, account tokens, or unnecessary sensitive documents.</p>
           <p>General, non-sensitive issues may also be reported through the <a href="https://github.com/mulitispaces/mulitispaces.github.io/issues">Multi Space support issue tracker</a>. That channel is public; use email for a private privacy inquiry.</p>
         </section>
@@ -118,7 +137,7 @@
     </div>
   </main>
   <footer class="site-footer">
-    <span>Multi Space · Published by mulitispaces</span>
+    <span>Multi Space · Published by Fidei Trading Limited</span>
     <nav aria-label="Footer navigation"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="privacy-policy.html#contact">Contact</a></nav>
   </footer>
 </body>

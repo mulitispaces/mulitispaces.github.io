@@ -1,115 +1,298 @@
 {
-  "date": "2026-10-08",
+  "date": "2026-11-05",
+  "timezone": "Asia/Taipei",
+  "scope": "pre-publication local validation; legal-content push subsequently approved; domain migration pending",
   "static_checks": [
     {
       "page": "index.html",
+      "html5_parse": "pass",
       "local_links_and_assets": 13,
       "unique_ids": 1,
       "h1_count": 1,
       "language": "en",
       "scripts": 0,
-      "sha256": "be02df9c681a360804bf1eee7a995eb5c9028f949d22a22510262c19026e44c6"
+      "sha256": "68156e09ee7c2022a87577e160aa0cfa09c066bdf143eae79521b8d327fb7684"
     },
     {
       "page": "privacy-policy.html",
-      "local_links_and_assets": 22,
-      "unique_ids": 12,
+      "html5_parse": "pass",
+      "local_links_and_assets": 25,
+      "unique_ids": 14,
       "h1_count": 1,
       "language": "en",
       "scripts": 0,
-      "sha256": "7a063c28f3807f89bf6e7a74ee9c15d29fa41cdb79ccba49635d9b84cbf448d3"
+      "sha256": "4cd6602d5a81a27c8c9faeeba9f55382c4cbbb8149ab05652eadc659b8f7ecb1"
     },
     {
       "page": "terms.html",
-      "local_links_and_assets": 22,
+      "html5_parse": "pass",
+      "local_links_and_assets": 23,
       "unique_ids": 11,
       "h1_count": 1,
       "language": "en",
       "scripts": 0,
-      "sha256": "642534f2567e217473e2f86eb525682ee41f145806726576cdbc501a9d1444c9"
+      "sha256": "667b0f2ec23683e01660c015ed69e7df40672fc7b243f97690726dd57d5fccd3"
     }
   ],
-  "errors": [],
-  "all_passed": true,
+  "local_links_checked": 61,
+  "external_links": [
+    {
+      "url": "https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure",
+      "status": "200 https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+      "status": "200 https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://firebase.google.com/docs/android/play-data-disclosure",
+      "status": "200 https://firebase.google.com/docs/android/play-data-disclosure text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://firebase.google.com/support/privacy",
+      "status": "200 https://firebase.google.com/support/privacy text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://github.com/mulitispaces/mulitispaces.github.io/issues",
+      "status": "200 https://github.com/mulitispaces/mulitispaces.github.io/issues text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://play.google.com/store/account/subscriptions?package=com.multispace.appcloner",
+      "status": "200 https://accounts.google.com/v3/signin/identifier?continue=https://play.google.com/store/account/subscriptions?package%3Dcom.multispace.appcloner&followup=https://play.google.com/store/account/subscriptions?package%3Dcom.multispace.appcloner&osid=1&passive=1209600&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S-600478679:1793834014262123 text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://policies.google.com/privacy",
+      "status": "200 https://policies.google.com/privacy text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://policies.google.com/technologies/partner-sites",
+      "status": "200 https://policies.google.com/technologies/partner-sites text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://support.google.com/googleplay/answer/2479637?hl=en",
+      "status": "200 https://support.google.com/googleplay/answer/2479637?hl=en text/html; charset=UTF-8",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://www.revenuecat.com/docs/platform-resources/google-platform-resources/google-plays-data-safety",
+      "status": "200 https://www.revenuecat.com/docs/platform-resources/google-platform-resources/google-plays-data-safety text/html",
+      "exit": 0,
+      "error": ""
+    },
+    {
+      "url": "https://www.revenuecat.com/privacy-policy",
+      "status": "200 https://www.revenuecat.com/privacy-policy text/html; charset=utf-8",
+      "exit": 0,
+      "error": ""
+    }
+  ],
+  "public_https_before_publication": [
+    {
+      "url": "https://mulitispaces.github.io/privacy-policy.html",
+      "response": "200 https://mulitispaces.github.io/privacy-policy.html text/html; charset=utf-8",
+      "verified_tls": true,
+      "contains_previous_publisher": true,
+      "contains_new_publisher": false,
+      "scope": "existing published revision, not this draft"
+    },
+    {
+      "url": "https://mulitispaces.github.io/terms.html",
+      "response": "200 https://mulitispaces.github.io/terms.html text/html; charset=utf-8",
+      "verified_tls": true,
+      "contains_previous_publisher": true,
+      "contains_new_publisher": false,
+      "scope": "existing published revision, not this draft"
+    }
+  ],
   "browser_checks": [
     {
-      "background": "rgb(244, 248, 247)",
-      "emailLinks": [
-        "mailto:ymwotow411846@gmail.com"
-      ],
-      "page": "/terms.html",
-      "publisher": true,
-      "scripts": 0,
-      "scrollWidth": 390,
+      "page": "/privacy-policy.html",
+      "width": 1280,
+      "scrollWidth": 1280,
       "theme": "light",
-      "width": 390
-    },
-    {
-      "background": "rgb(13, 25, 30)",
-      "page": "/terms.html",
-      "scrollWidth": 390,
-      "theme": "dark",
-      "width": 390
-    },
-    {
-      "background": "rgb(13, 25, 30)",
+      "background": "rgb(244, 248, 247)",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
       "brokenImages": 0,
-      "page": "/index.html",
-      "scrollWidth": 390,
-      "theme": "dark",
-      "width": 390
+      "scripts": 0
     },
     {
-      "background": "rgb(244, 248, 247)",
-      "page": "/index.html",
-      "scrollWidth": 390,
-      "theme": "light",
-      "width": 390
-    },
-    {
-      "background": "rgb(244, 248, 247)",
-      "emailLinks": [
-        "mailto:ymwotow411846@gmail.com"
-      ],
       "page": "/privacy-policy.html",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "theme": "dark",
+      "background": "rgb(13, 25, 30)",
       "publisher": true,
-      "scripts": 0,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/privacy-policy.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "background": "rgb(13, 25, 30)",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/privacy-policy.html",
+      "width": 390,
       "scrollWidth": 390,
       "theme": "light",
-      "width": 390
-    },
-    {
-      "background": "rgb(13, 25, 30)",
-      "page": "/privacy-policy.html",
-      "scrollWidth": 390,
-      "theme": "dark",
-      "width": 390
-    },
-    {
-      "background": "rgb(13, 25, 30)",
-      "contentsHeight": 568.234375,
-      "page": "/privacy-policy.html",
-      "scrollWidth": 1280,
-      "theme": "dark",
-      "width": 1280
-    },
-    {
       "background": "rgb(244, 248, 247)",
-      "page": "/privacy-policy.html",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/terms.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "theme": "light",
+      "background": "rgb(244, 248, 247)",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/terms.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "background": "rgb(13, 25, 30)",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/terms.html",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "theme": "dark",
+      "background": "rgb(13, 25, 30)",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/terms.html",
+      "width": 1280,
       "scrollWidth": 1280,
       "theme": "light",
-      "width": 1280
+      "background": "rgb(244, 248, 247)",
+      "publisher": true,
+      "emailLinks": [
+        "mailto:addaeisidore@gmail.com"
+      ],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/index.html",
+      "width": 1280,
+      "scrollWidth": 1280,
+      "theme": "light",
+      "background": "rgb(244, 248, 247)",
+      "publisher": true,
+      "emailLinks": [],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/index.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "theme": "light",
+      "background": "rgb(244, 248, 247)",
+      "publisher": true,
+      "emailLinks": [],
+      "brokenImages": 0,
+      "scripts": 0
+    },
+    {
+      "page": "/index.html",
+      "width": 390,
+      "scrollWidth": 390,
+      "theme": "dark",
+      "background": "rgb(13, 25, 30)",
+      "publisher": true,
+      "emailLinks": [],
+      "brokenImages": 0,
+      "scripts": 0
     }
   ],
-  "runtime_in_scope": [
-    "local HTML navigation and anchors",
-    "1280 desktop and 390 mobile layout",
-    "system light and dark color schemes",
-    "real publisher and private email rendered"
-  ],
-  "not_verified": [
-    "GitHub Pages deployment",
-    "Google Play policy approval",
-    "native engine data-flow audit"
+  "custom_domain": {
+    "hostname": "multispace.beasonapps.com",
+    "CNAME_file": "inactive template docs/custom-domain.CNAME; no root CNAME in publication",
+    "dns_provider": "Cloudflare",
+    "proposed_record": {
+      "type": "CNAME",
+      "name": "multispace",
+      "target": "mulitispaces.github.io",
+      "proxy": "DNS only",
+      "ttl": "Auto"
+    },
+    "dns_change_applied": false,
+    "github_pages_binding_applied": false,
+    "https_certificate_verified_for_new_domain": false
+  },
+  "android_change": {
+    "file": "app/src/main/java/com/multispace/appcloner/ui/settings/MultiSpaceLegalLinks.kt",
+    "scope": "support email literal only",
+    "email": "addaeisidore@gmail.com",
+    "existing_legal_urls_retained": true,
+    "build_or_device_test_run": false
+  },
+  "errors": [],
+  "local_validation_passed": true,
+  "not_verified_at_prepublication_review": [
+    "new revision deployed to GitHub Pages",
+    "custom domain binding and certificate",
+    "old URL redirects to custom domain",
+    "worldwide access from every region",
+    "Google Play approval or trader declaration",
+    "ad delivery / UMP remote configuration / Meta mediation transfers",
+    "Analytics uploads",
+    "purchase, restore, renewal or refund runtime transactions",
+    "complete native-engine or guest-app data-flow audit"
   ]
 }
