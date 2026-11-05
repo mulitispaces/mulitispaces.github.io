@@ -8,7 +8,7 @@ Static English privacy policy and terms for the Android app `com.multispace.appc
 - `assets/site.css`: responsive layout with automatic system light/dark appearance.
 - `assets/multispace-logo.png`: existing Multi Space brand asset.
 - `CNAME`: active GitHub Pages custom-domain configuration for `multispace.beasonapps.com`.
-- `app-ads.txt`: AdMob authorized seller declaration at `https://multispace.beasonapps.com/app-ads.txt`, using publisher `pub-9541172831129326`.
+- `app-ads.txt`: owner-supplied Google and Meta authorized seller declarations at `https://multispace.beasonapps.com/app-ads.txt`.
 - `docs/custom-domain.CNAME`: same-hostname reference copy; the root `CNAME` is the Pages configuration.
 
 The site needs no JavaScript, external fonts, package installation, or build step. The HTML includes the full policy text and is readable without scripting. It does not add tracking scripts, advertising, or cookies.
@@ -41,15 +41,16 @@ As of November 5, 2026, **multispace.beasonapps.com** is verified for the `mulit
 
 GitHub's certificate is approved for `multispace.beasonapps.com`, and **Enforce HTTPS is enabled** in the refreshed Pages UI and API (`enforce=true`). Both `https://multispace.beasonapps.com/privacy-policy.html` and `https://multispace.beasonapps.com/terms.html` return HTTPS 200 with the correct developer and email; no old email remains in the checked page text. Requests to the custom-domain HTTP URLs return 301 to HTTPS. See the [completed domain configuration](docs/custom-domain.md) and [verification results](docs/verification.json), including the certificate details and redirect boundaries. The custom-domain URLs are used directly by the current app source; the old GitHub Pages links continue to redirect for existing installations and stored links.
 
-## AdMob authorized sellers
+## Advertising authorized sellers
 
-The root `app-ads.txt` contains the exact AdMob declaration supplied by the owner:
+The root `app-ads.txt` contains the exact Google and Meta declarations supplied by the owner:
 
 ```text
 google.com, pub-9541172831129326, DIRECT, f08c47fec0942fa0
+facebook.com, 1006579368132673, DIRECT, c3e20eee3f780d68
 ```
 
-Publish it as `https://multispace.beasonapps.com/app-ads.txt` and use `https://multispace.beasonapps.com/` as the developer website in the Google Play store listing. This publisher matches the app’s checked-in production AdMob App ID and all three ad units. No other advertising seller has been inferred or added.
+Publish it as `https://multispace.beasonapps.com/app-ads.txt` and use `https://multispace.beasonapps.com/` as the developer website in the Google Play store listing. The Google publisher matches the app’s checked-in production AdMob App ID and all three ad units. The Meta declaration was explicitly supplied for publication on November 5, 2026; its seller ID was not inferred from the Google publisher ID. Publishing these records does not confirm Meta account verification, mediation configuration, or actual ad delivery. No other advertising seller has been inferred or added.
 
 AdMob supports this first-level subdomain. It probes the subdomain before falling back to the parent domain if the file is missing; a valid file here does not require changing the apex DNS or the other sibling sites. See [Google’s setup and crawler rules](https://support.google.com/admob/answer/9363762?hl=en). After publication, request “Check for updates” in AdMob; its verification status can take up to 24 hours to update. Successful public HTTP access is not itself a confirmed AdMob verification result.
 
