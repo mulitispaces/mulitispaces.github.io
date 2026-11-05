@@ -7,7 +7,8 @@ Static English privacy policy and terms for the Android app `com.multispace.appc
 - `terms.html`: use of the app, compatibility, third-party applications, advertising, subscriptions and other purchases, updates, and legal rights.
 - `assets/site.css`: responsive layout with automatic system light/dark appearance.
 - `assets/multispace-logo.png`: existing Multi Space brand asset.
-- `docs/custom-domain.CNAME`: inactive template for the proposed `multispace.beasonapps.com` binding.
+- `CNAME`: active GitHub Pages custom-domain configuration for `multispace.beasonapps.com`.
+- `docs/custom-domain.CNAME`: same-hostname reference copy; the root `CNAME` is the Pages configuration.
 
 The site needs no JavaScript, external fonts, package installation, or build step. The HTML includes the full policy text and is readable without scripting. It does not add tracking scripts, advertising, or cookies.
 
@@ -23,19 +24,21 @@ Then open `http://127.0.0.1:8000/`. Python is only a convenient local preview se
 
 ## Publication
 
-This repository is already served through GitHub Pages. `.nojekyll` keeps it a static HTML site. The owner approved pushing the November 5, 2026 legal revision after review. Publish the legal content on the existing Pages domain first; the custom-domain migration remains pending DNS and HTTPS readiness. If publication happens on a later date, review the displayed last-updated dates before publishing.
+This repository is served through GitHub Pages under the GitHub owner `mulitispaces`. `.nojekyll` keeps it a static HTML site. The owner approved publishing the November 5, 2026 legal revision and configuring the custom domain. The custom-domain migration is complete: domain verification, DNS, Pages binding, the certificate, HTTPS enforcement, and legal-page access have been checked.
 
-Existing public destinations used by the app:
+Existing public destinations retained for the app and Google Play:
 
 - `https://mulitispaces.github.io/`
 - `https://mulitispaces.github.io/privacy-policy.html`
 - `https://mulitispaces.github.io/terms.html`
 
-Before publication, logged-out HTTPS GET requests to the existing privacy and terms URLs returned HTTP 200 and HTML on November 5, 2026 (Asia/Taipei). Those checks covered the previous text; verify the deployed revision after pushing. The app's `MultiSpaceLegalLinks.kt` already points to these destinations.
+On November 5, 2026 (Asia/Taipei), both existing HTTPS legal links were verified to follow this chain: old GitHub Pages HTTPS URL → HTTP 301 to the custom-domain HTTP URL → HTTP 301 to the custom-domain HTTPS URL → HTTP 200. The final pages use HTTPS; the redirect chain includes an intermediate HTTP URL. The owner chose to retain the existing app and Google Play URLs. The app's `MultiSpaceLegalLinks.kt` URL constants and Play Console fields are unchanged.
 
-The Google Play trader declaration's terms URL is `https://mulitispaces.github.io/terms.html`. Keep it an app-specific, publicly readable HTML page with valid HTTPS, no authentication, and no geographic restrictions. A successful request from this review environment does not prove accessibility from every country. Trader identity and operator contact details must remain accurate in Play Console; this repository does not change that declaration or invent an address or phone number.
+The retained terms destination is `https://mulitispaces.github.io/terms.html`. The Google Play trader declaration needs an app-specific, publicly readable HTML terms page with valid HTTPS, no authentication, and no geographic restrictions. The checked old terms link reaches the correct final HTTPS page without a login. A successful request from this review environment does not prove accessibility from every country. Trader identity and operator contact details must remain accurate in Play Console; this repository does not change that declaration or invent an address or phone number.
 
-The owner has selected **multispace.beasonapps.com** as the custom domain. The hostname still returned NXDOMAIN during the pre-push check, and Pages has no custom domain bound. An inactive CNAME template is stored under `docs/`; do not place it at the repository root until the domain migration is ready, because that could redirect working app links to an unresolved hostname. See the [migration plan](docs/custom-domain.md) for Cloudflare records, GitHub verification, and redirect checks. After migration and verification, the intended store URLs are `https://multispace.beasonapps.com/privacy-policy.html` and `https://multispace.beasonapps.com/terms.html`.
+As of November 5, 2026, **multispace.beasonapps.com** is verified for the `mulitispaces` GitHub account, and Pages is bound to it with `protected_domain_state=verified`. Only this exact hostname was verified; the parent domain was not verified. Cloudflare has saved the GitHub-generated verification TXT and the `multispace` CNAME targeting `mulitispaces.github.io` with **DNS only** proxy status and **Auto** TTL. GitHub created the root `CNAME` in commit `5b678e2`, which has been pulled into this checkout. Retain the exact verification TXT; its value need not be copied into this repository.
+
+GitHub's certificate is approved for `multispace.beasonapps.com`, and **Enforce HTTPS is enabled** in the refreshed Pages UI and API (`enforce=true`). Both `https://multispace.beasonapps.com/privacy-policy.html` and `https://multispace.beasonapps.com/terms.html` return HTTPS 200 with the correct developer and email; no old email remains in the checked page text. Requests to the custom-domain HTTP URLs return 301 to HTTPS. See the [completed domain configuration](docs/custom-domain.md) and [verification results](docs/verification.json), including the certificate details and redirect boundaries. The custom-domain URLs are available directly, while the existing app/store URLs remain the owner's selected destinations.
 
 ## Keeping disclosures accurate
 
@@ -43,7 +46,7 @@ The policy follows the checked-in commercial Universal configuration reviewed on
 
 Review the pages when those settings, SDKs, data flows, purchases, or backup rules change. Do not enable new collection merely because wording exists for a feature. Do not claim an actual purchase, ad delivery, Analytics upload, or mediation partner transfer has been verified from a source-only review.
 
-The owner-supplied developer/service-provider name is **Fidei Trading Limited**, with private contact **addaeisidore@gmail.com**. The Multi Space brand, Android package and GitHub repository remain unchanged. The app's existing legal links are retained during the proposed domain migration, and its support email constant is synchronized with this revision; no Play Console identity declaration is changed here.
+The owner-supplied developer/service-provider name is **Fidei Trading Limited**, with private contact **addaeisidore@gmail.com**. The Multi Space brand, Android package and GitHub repository remain unchanged. The app's existing legal links are retained after domain migration, and its support email constant is synchronized with this revision; no Play Console identity declaration is changed here.
 
 See [implementation notes](docs/implementation-notes.md) for the source basis and verification boundaries. A published policy is one part of release preparation; it does not replace Play Console Data safety, in-app access to the policy, permission disclosures, or any consent required for actual data processing.
 

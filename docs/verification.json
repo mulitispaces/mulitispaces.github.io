@@ -1,7 +1,7 @@
 {
   "date": "2026-11-05",
   "timezone": "Asia/Taipei",
-  "scope": "pre-publication local validation; legal-content push subsequently approved; domain migration pending",
+  "scope": "reviewed legal revision and live custom-domain HTTPS migration",
   "static_checks": [
     {
       "page": "index.html",
@@ -262,7 +262,7 @@
   ],
   "custom_domain": {
     "hostname": "multispace.beasonapps.com",
-    "CNAME_file": "inactive template docs/custom-domain.CNAME; no root CNAME in publication",
+    "CNAME_file": "active root CNAME, created by GitHub Pages in commit 5b678e2",
     "dns_provider": "Cloudflare",
     "proposed_record": {
       "type": "CNAME",
@@ -271,9 +271,15 @@
       "proxy": "DNS only",
       "ttl": "Auto"
     },
-    "dns_change_applied": false,
-    "github_pages_binding_applied": false,
-    "https_certificate_verified_for_new_domain": false
+    "dns_change_applied": true,
+    "github_pages_binding_applied": true,
+    "https_certificate_verified_for_new_domain": true,
+    "protected_domain_state": "verified",
+    "verified_hostname": "multispace.beasonapps.com",
+    "parent_domain_verified": false,
+    "https_enforced": true,
+    "verification_txt_retained": true,
+    "certificate_expires_at_taipei": "2027-02-03T07:37:21+08:00"
   },
   "android_change": {
     "file": "app/src/main/java/com/multispace/appcloner/ui/settings/MultiSpaceLegalLinks.kt",
@@ -294,5 +300,252 @@
     "Analytics uploads",
     "purchase, restore, renewal or refund runtime transactions",
     "complete native-engine or guest-app data-flow audit"
+  ],
+  "domain_migration_live_verification": {
+    "checked_at": "2026-11-05T08:39:01+08:00",
+    "checks": {
+      "new_privacy": {
+        "start_url": "https://multispace.beasonapps.com/privacy-policy.html",
+        "chain": [
+          {
+            "url": "https://multispace.beasonapps.com/privacy-policy.html",
+            "status": 200,
+            "location": null,
+            "server": "GitHub.com"
+          }
+        ],
+        "final_url": "https://multispace.beasonapps.com/privacy-policy.html",
+        "final_status": 200,
+        "content": {
+          "contains_fidei_trading_limited": true,
+          "contains_addaeisidore": true,
+          "contains_old_email": false,
+          "contains_policy_title": true,
+          "contains_terms_title": false,
+          "bytes": 21235
+        },
+        "passed": true
+      },
+      "new_terms": {
+        "start_url": "https://multispace.beasonapps.com/terms.html",
+        "chain": [
+          {
+            "url": "https://multispace.beasonapps.com/terms.html",
+            "status": 200,
+            "location": null,
+            "server": "GitHub.com"
+          }
+        ],
+        "final_url": "https://multispace.beasonapps.com/terms.html",
+        "final_status": 200,
+        "content": {
+          "contains_fidei_trading_limited": true,
+          "contains_addaeisidore": true,
+          "contains_old_email": false,
+          "contains_policy_title": false,
+          "contains_terms_title": true,
+          "bytes": 13392
+        },
+        "passed": true
+      },
+      "old_privacy": {
+        "start_url": "https://mulitispaces.github.io/privacy-policy.html",
+        "chain": [
+          {
+            "url": "https://mulitispaces.github.io/privacy-policy.html",
+            "status": 301,
+            "location": "http://multispace.beasonapps.com/privacy-policy.html",
+            "server": "GitHub.com"
+          },
+          {
+            "url": "http://multispace.beasonapps.com/privacy-policy.html",
+            "status": 301,
+            "location": "https://multispace.beasonapps.com/privacy-policy.html",
+            "server": "GitHub.com"
+          },
+          {
+            "url": "https://multispace.beasonapps.com/privacy-policy.html",
+            "status": 200,
+            "location": null,
+            "server": "GitHub.com"
+          }
+        ],
+        "final_url": "https://multispace.beasonapps.com/privacy-policy.html",
+        "final_status": 200,
+        "content": {
+          "contains_fidei_trading_limited": true,
+          "contains_addaeisidore": true,
+          "contains_old_email": false,
+          "contains_policy_title": true,
+          "contains_terms_title": false,
+          "bytes": 21235
+        },
+        "passed": true
+      },
+      "old_terms": {
+        "start_url": "https://mulitispaces.github.io/terms.html",
+        "chain": [
+          {
+            "url": "https://mulitispaces.github.io/terms.html",
+            "status": 301,
+            "location": "http://multispace.beasonapps.com/terms.html",
+            "server": "GitHub.com"
+          },
+          {
+            "url": "http://multispace.beasonapps.com/terms.html",
+            "status": 301,
+            "location": "https://multispace.beasonapps.com/terms.html",
+            "server": "GitHub.com"
+          },
+          {
+            "url": "https://multispace.beasonapps.com/terms.html",
+            "status": 200,
+            "location": null,
+            "server": "GitHub.com"
+          }
+        ],
+        "final_url": "https://multispace.beasonapps.com/terms.html",
+        "final_status": 200,
+        "content": {
+          "contains_fidei_trading_limited": true,
+          "contains_addaeisidore": true,
+          "contains_old_email": false,
+          "contains_policy_title": false,
+          "contains_terms_title": true,
+          "bytes": 13392
+        },
+        "passed": true
+      },
+      "http_privacy": {
+        "start_url": "http://multispace.beasonapps.com/privacy-policy.html",
+        "chain": [
+          {
+            "url": "http://multispace.beasonapps.com/privacy-policy.html",
+            "status": 301,
+            "location": "https://multispace.beasonapps.com/privacy-policy.html",
+            "server": "GitHub.com"
+          },
+          {
+            "url": "https://multispace.beasonapps.com/privacy-policy.html",
+            "status": 200,
+            "location": null,
+            "server": "GitHub.com"
+          }
+        ],
+        "final_url": "https://multispace.beasonapps.com/privacy-policy.html",
+        "final_status": 200,
+        "content": {
+          "contains_fidei_trading_limited": true,
+          "contains_addaeisidore": true,
+          "contains_old_email": false,
+          "contains_policy_title": true,
+          "contains_terms_title": false,
+          "bytes": 21235
+        },
+        "passed": true
+      },
+      "http_terms": {
+        "start_url": "http://multispace.beasonapps.com/terms.html",
+        "chain": [
+          {
+            "url": "http://multispace.beasonapps.com/terms.html",
+            "status": 301,
+            "location": "https://multispace.beasonapps.com/terms.html",
+            "server": "GitHub.com"
+          },
+          {
+            "url": "https://multispace.beasonapps.com/terms.html",
+            "status": 200,
+            "location": null,
+            "server": "GitHub.com"
+          }
+        ],
+        "final_url": "https://multispace.beasonapps.com/terms.html",
+        "final_status": 200,
+        "content": {
+          "contains_fidei_trading_limited": true,
+          "contains_addaeisidore": true,
+          "contains_old_email": false,
+          "contains_policy_title": false,
+          "contains_terms_title": true,
+          "bytes": 13392
+        },
+        "passed": true
+      }
+    },
+    "tls": {
+      "verified": true,
+      "check_hostname": true,
+      "verify_mode": "CERT_REQUIRED",
+      "subject": [
+        {
+          "commonName": "multispace.beasonapps.com"
+        }
+      ],
+      "subjectAltName": [
+        [
+          "DNS",
+          "multispace.beasonapps.com"
+        ]
+      ],
+      "issuer": [
+        {
+          "countryName": "US"
+        },
+        {
+          "organizationName": "Let's Encrypt"
+        },
+        {
+          "commonName": "YR2"
+        }
+      ],
+      "notBefore": "Nov  4 23:37:22 2026 GMT",
+      "notAfter": "Feb  2 23:37:21 2027 GMT",
+      "protocol": "TLSv1.3",
+      "cipher": [
+        "TLS_AES_128_GCM_SHA256",
+        "TLSv1.3",
+        128
+      ]
+    },
+    "passed": true,
+    "https_source_checks": [
+      {
+        "path": "privacy-policy.html",
+        "status": 200,
+        "tls_verified": true,
+        "sha256": "4cd6602d5a81a27c8c9faeeba9f55382c4cbbb8149ab05652eadc659b8f7ecb1",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "terms.html",
+        "status": 200,
+        "tls_verified": true,
+        "sha256": "667b0f2ec23683e01660c015ed69e7df40672fc7b243f97690726dd57d5fccd3",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "assets/site.css",
+        "status": 200,
+        "tls_verified": true,
+        "sha256": "002bd40897fe9ae8f0b731612c497429a73ca464a4b45d5006b63aef89b76736",
+        "matches_reviewed_source": true
+      },
+      {
+        "path": "assets/multispace-logo.png",
+        "status": 200,
+        "tls_verified": true,
+        "sha256": "a96565fd70d707be15905ab22087538e001d4acccf4ea45211574f09cd5c6f5c",
+        "matches_reviewed_source": true
+      }
+    ]
+  },
+  "remaining_verification_limits": [
+    "worldwide access from every region",
+    "Google Play policy approval and store-field changes",
+    "ad delivery, UMP remote configuration, or Meta mediation transfers",
+    "Analytics uploads and actual purchase/restore/renewal/refund transactions",
+    "complete native-engine or guest-app data-flow audit",
+    "rebuilt Android artifact for the support email change"
   ]
 }

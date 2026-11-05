@@ -1,43 +1,41 @@
-# Proposed custom domain
+# Custom domain configuration
 
-Owner-selected domain: **multispace.beasonapps.com**. Prepared on November 5, 2026 (Asia/Taipei). The owner has approved pushing the legal content. Domain migration remains pending DNS and HTTPS readiness; no DNS or GitHub Pages domain setting has been changed.
+Owner-selected domain: **multispace.beasonapps.com**. Migration completed and verified on November 5, 2026 (Asia/Taipei). The owner authorized the legal-content publication and domain setup. GitHub verification, the Cloudflare records, Pages binding, certificate issuance, HTTPS enforcement, and legal-page access are complete. The owner chose to retain the existing GitHub Pages URLs in the app and Google Play.
 
-The inactive template `docs/custom-domain.CNAME` contains this hostname. A root `CNAME` on the Pages publication branch can change the site's domain configuration. Keep the template under `docs/` until migration is ready, then move/copy it to the root as part of that migration. The current legal-content publication deliberately leaves the working `github.io` domain in place.
+GitHub created the active root `CNAME` containing `multispace.beasonapps.com` in commit `5b678e2`, and that commit has been pulled into this checkout. `docs/custom-domain.CNAME` remains a same-value reference copy; it is not the active Pages configuration.
 
-## Read-only readiness checks
+## Saved GitHub and Cloudflare configuration
 
-Google and Cloudflare public DNS-over-HTTPS results agreed:
-
-- `beasonapps.com` uses `kehlani.ns.cloudflare.com` and `randy.ns.cloudflare.com`.
-- `multispace.beasonapps.com` has no existing public CNAME, A, AAAA, TXT or CAA record (NXDOMAIN at review).
-- The root domain has no CAA restriction; no additional CAA record is needed for the proposed GitHub Pages certificate on the evidence reviewed.
-- Public DNS cannot establish whether another GitHub account has claimed the domain. Verify ownership in GitHub before binding it.
-
-Local DNS was affected by a fake-IP proxy, so its synthetic `198.18.x`/IPv6 answers were not treated as public records.
-
-## Approved migration steps
-
-1. In the `mulitispaces` GitHub account's personal **Settings → Pages**, verify `beasonapps.com`. GitHub supplies the actual verification TXT value. Add that exact value in Cloudflare; do not invent it. A verified root domain covers its immediate subdomains. Retain the verification record.
-2. Publish the approved legal revision and bind **multispace.beasonapps.com** in the website repository's **Settings → Pages → Custom domain**. Coordinate the checked-in `CNAME` with the Pages setting; saving that setting can itself create a commit on a branch-based Pages site.
-3. Add this record in Cloudflare for `beasonapps.com`:
+- GitHub owner: `mulitispaces`; repository: `mulitispaces/mulitispaces.github.io`.
+- GitHub **Settings → Pages** shows the exact hostname `multispace.beasonapps.com` as **Verified**. The parent `beasonapps.com` was not verified.
+- The repository's Pages custom domain is `multispace.beasonapps.com`, with `protected_domain_state=verified`.
+- The GitHub-generated verification TXT for this exact hostname is saved in Cloudflare. Retain its exact record name and value as supplied by GitHub; they are not reproduced here.
+- Cloudflare has saved the following record for the `beasonapps.com` zone:
 
 | Type | Name | Target | Proxy status | TTL |
 | --- | --- | --- | --- | --- |
 | CNAME | `multispace` | `mulitispaces.github.io` | DNS only (gray cloud) | Auto |
 
-The target is a hostname, without `https://`, a repository name, or a page path. This migration requires no root-domain, MX, or other subdomain changes. Do not add conflicting A/AAAA records for `multispace`.
+The target is a hostname, without `https://`, a repository name, or a page path. Keep it DNS only. Do not add conflicting A/AAAA records for `multispace` or change the root domain, MX records, or unrelated subdomains.
 
-4. Wait for GitHub's DNS check and TLS certificate issuance, then enable **Enforce HTTPS**.
-5. Verify logged-out access to both new pages, their updated developer name/email and text, and the redirects from both existing app links:
+Only the exact hostname was verified because sibling subdomains already serve Pages sites under other GitHub accounts (`browser` → `si-browser.github.io`, `pdf` → `inkpdf.github.io`, and `phantom` → `multimorespace.github.io`). Do not expand verification to the parent `beasonapps.com`, since parent-domain verification could affect those apps.
 
-| Existing app URL | Intended new destination |
+## Verified HTTPS and legal-page access
+
+GitHub's certificate is approved with CN/SAN `multispace.beasonapps.com`, issued by **Let's Encrypt YR2**, and valid until **February 3, 2027 at 07:37:21 Asia/Taipei**. **Enforce HTTPS is enabled**: the setting was checked in the Pages UI after refresh and confirmed by the API (`enforce=true`).
+
+Both new legal pages return **HTTPS 200** and contain **Fidei Trading Limited** and **addaeisidore@gmail.com**, with no old contact email in the checked text. Their HTTP URLs return **301 to HTTPS**. The existing app links were also checked:
+
+| Retained app/store URL | Verified final HTTPS destination |
 | --- | --- |
 | `https://mulitispaces.github.io/privacy-policy.html` | `https://multispace.beasonapps.com/privacy-policy.html` |
 | `https://mulitispaces.github.io/terms.html` | `https://multispace.beasonapps.com/terms.html` |
 
-The old links are expected to redirect after binding, but that has not happened or been verified in this revision. The Android URL constants are retained so installed versions keep using their existing destinations. Verify redirect behavior before relying on it or changing app/store URLs.
+For each old link, the observed chain is **old GitHub Pages HTTPS → 301 to new-domain HTTP → 301 to new-domain HTTPS → 200**. The final response is HTTPS; this is not a direct HTTPS-to-HTTPS redirect at every hop. The Android URL constants remain unchanged so installed versions keep their existing destinations. Google Play fields were not changed, in accordance with the owner's choice to keep the old URLs.
 
-6. Only after both new pages pass verification, use the new terms URL for the Google Play trader declaration and the new privacy URL in the appropriate store fields. Account/app trader identity and actual operator contact details remain the owner's responsibility. This document does not change Play Console.
+See [verification results](verification.json) for the deployment and redirect checks. The custom-domain URLs can be opened directly, but no app/store URL migration is required by this configuration. Account/app trader identity and actual operator contact details remain the owner's responsibility. This document does not change Play Console.
+
+Earlier pre-configuration checks returned NXDOMAIN for the new hostname; those historical readiness results are superseded by the completed configuration and HTTPS checks. Local DNS was affected by a fake-IP proxy, so its synthetic `198.18.x`/IPv6 answers were not treated as public records. These checks establish observed access from the review environment, not availability in every country.
 
 Required access: Cloudflare DNS editing for `beasonapps.com`, the `mulitispaces` account's Pages verification settings, and the website repository's Pages settings. No passwords or API tokens belong in this repository.
 
